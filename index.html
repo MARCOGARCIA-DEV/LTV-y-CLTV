@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  < <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título optimizado para SEO -->
+  <title>Calculadoras de LTV y CLTV | Más Clientes</title>
+  <!-- Descripción meta para SEO -->
+  <meta name="description"
+    content="Calculadoras de Lifetime Value (LTV) y Customer Lifetime Value (CLTV) diseñadas por Más Clientes para optimizar tu estrategia de negocio y maximizar ingresos." />
+  <!-- Palabras clave para SEO -->
+  <meta name="keywords"
+    content="Lifetime Value, Customer Lifetime Value, LTV, CLTV, Más Clientes, calculadoras de LTV, estrategia de negocios, maximizar ingresos" />
+  <!-- Autor -->
+  <meta name="author" content="Más Clientes" />
+  <!-- Icono de la página (favicon) -->
+  <link rel="icon" type="image/png" href="assets/ICON_PESTAÑA/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/ICON_PESTAÑA/favicon.svg" />
+  <link rel="shortcut icon" href="assets/ICON_PESTAÑA/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/ICON_PESTAÑA/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="LTV y CLTV" />
+  <link rel="manifest" href="assets/ICON_PESTAÑA/site.webmanifest" />
+  <!-- Enlace al CSS -->
+  <link rel="stylesheet" href="/assets/styles.css" />
+  </ </head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav>
+    <ul class="nav-left">
+      <li class="extra-item-left hidden">
+        <a href="index.html"><img src="/assets/LOGOS/LOGO MÁS CLIENTES ltv y cltv.png" alt="" /></a>
+      </li>
+    </ul>
+
+    <div class="nav-toggle">
+      <!-- Ícono del menú hamburguesa -->
+      <span class="iconify" data-icon="mdi:menu" data-inline="false"></span>
+    </div>
+
+    <ul class="nav-center nav-menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="https://masclientes.pe/" target="_blank">Nosotros</a></li>
+      <li><a href="#LTV">LTV</a></li>
+      <li><a href="#CLTV">CLTV</a></li>
+      <li><a href="#footer">Contacto</a></li>
+    </ul>
+    <ul class="nav-right">
+      <li class="extra-item-right hidden">
+
+        <a href="https://wa.me/51976866575" target="_blank">+51 976 866 575</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <header id="inicio">
+    <div class="portada-section">
+      <div class="column">
+        <img src="/assets/LOGOS/Logo.png" alt="Logo" class="logo" />
+      </div>
+      <div class="column">
+        <h1 class="container01">CALCULADORA</h1> <br> <br>
+        <h2 class="container02">
+          LIFETIME VALUE <br />
+          Y <br />
+          CONSUMER LIFETIME VALUE
+        </h2>
+      </div>
+    </div>
+
+    <!-- Flecha de scroll -->
+    <div class="scroll-arrow">
+      <span class="iconify arrow" data-icon="gravity-ui:arrow-down-from-line" data-inline="false"></span>
+    </div>
+  </header>
+
+
+  <!-- LTV - CALCULADORA -->
+
+  <div class="lifetime_value" id="LTV">
+    <div class="container">
+      <div class="descripcion">
+        <h1 class="title_ltv">LIFETIME<br />VALUE(LTV)</h1>
+        <p>
+          El Lifetime Value (LTV) es una forma de medir cuánto valor puede
+          generar un cliente para tu
+          negocio a lo largo del tiempo que sigue siendo tu cliente. Es una
+          herramienta clave para
+          entender el impacto económico que tienen tus clientes y te ayuda a
+          tomar decisiones más
+          estratégicas para aumentar su valor a lo largo del tiempo.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="tab-container">
+        <!-- Pestañas de navegación -->
+        <div class="tab-filter-container">
+          <li class="filter-btn_ltv active" data-tab="tab1_ltv">Basica</li>
+          <li class="filter-btn_ltv" data-tab="tab2_ltv">Avanzada</li>
+        </div>
+
+        <!-- Contenido de las pestañas -->
+        <div class="tab-filter-item-container">
+
+          <!-- Calculadora básica -->
+          <div class="tab-item_ltv tab1_ltv select_tab_ltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">LTV BASICA</h1>
+                <p class="paragraph">
+                  Estima el valor promedio que un cliente aporta a tu negocio durante su relación
+                  comercial. Te ayuda a ver cuánto puedes esperar ganar de cada cliente en general,
+                  facilitando la planificación de estrategias de marketing y ventas.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="ltv-basic-form">
+                    <div class="input-group">
+                      <label for="avgRevenue">Ingreso Promedio por Cliente:</label>
+                      <input type="number" id="avgRevenue" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="avgCustomerLifespan">Vida Útil Promedio del Cliente (en meses):</label>
+                      <input type="number" id="avgCustomerLifespan" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular LTV</button>
+                      <button type="button" id="clearBasicResult">Eliminar LTV</button>
+                    </div> <br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button class="pdf" id="descargarBtn" style="display:none;" onclick="descargarPDF()">Descargar
+                      Resultados</button>
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="basicResult"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calculadora avanzada -->
+          <div class="tab-item_ltv tab2_ltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">LTV AVANZADA</h1>
+                <p class="paragraph">
+                  Calcula el valor de un cliente considerando factores adicionales como el margen de
+                  beneficio, la tasa de retención y la tasa de descuento. Ofrece una visión más detallada y
+                  precisa del valor de tus clientes para tomar decisiones más informadas a largo plazo.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="ltv-advanced-form">
+                    <div class="input-group">
+                      <label for="averageRevenue">Ingreso Promedio por Cliente (ARPU):</label>
+                      <input type="number" id="averageRevenue" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="customerAcquisitionCost">Costo de Adquisición de Clientes (CAC):</label>
+                      <input type="number" id="customerAcquisitionCost" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="customerLifetime">Tiempo de Vida del Cliente (meses):</label>
+                      <input type="number" id="customerLifetime" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular LTV</button>
+                      <button type="button" id="clearAdvancedResult">Eliminar LTV</button>
+                    </div><br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button class="pdf" id="descargarBtn01" style="display:none;" onclick="descargarPDF01()">Descargar
+                      Resultados</button>
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="advancedResult"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CLTV - CALCULADORA -->
+
+  <div class="consumer_lifetime_value" id="CLTV">
+    <div class="container">
+      <div class="descripcion">
+        <h1 class="title_cltv">CONSUMER<br />LIFETIME<br />VALUE(LTV)</h1>
+        <p>
+          El Customer Lifetime Value (CLTV) te dice cuánto dinero puede hacerte ganar un cliente mientras sigue
+          comprando en tu negocio, pero también considera cuánto te cuesta mantenerlo. Es una forma de ver no solo
+          cuánto vale un cliente, sino también qué tan rentable es a largo plazo, lo que te ayuda a planear mejor tus
+          estrategias para sacar el máximo provecho de cada cliente.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="tab-container">
+        <!-- Pestañas de navegación -->
+        <div class="tab-filter-container">
+          <li class="filter-btn_cltv active" data-tab="tab1_cltv">BASICA</li>
+          <li class="filter-btn_cltv" data-tab="tab2_cltv">Tradicional</li>
+          <li class="filter-btn_cltv" data-tab="tab3_cltv">Margen</li>
+          <li class="filter-btn_cltv" data-tab="tab4_cltv">Predictivo</li>
+          <li class="filter-btn_cltv" data-tab="tab5_cltv"> Markov</li>
+        </div>
+
+        <!-- Contenido de las pestañas -->
+        <div class="tab-filter-item-container">
+
+          <!-- CLTV_01----CLTV_Basico -->
+          <div class="tab-item_cltv tab1_cltv select_tab_cltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">CLTV Basica</h1>
+                <p class="paragraph">
+                  Es una fórmula utilizada para estimar el valor total que un cliente generará para una empresa durante
+                  el tiempo que
+                  dure su relación con dicha empresa. El CLTV es una métrica clave en marketing y finanzas, ya que
+                  permite a las
+                  empresas proyectar ingresos futuros y tomar decisiones informadas sobre estrategias de retención,
+                  inversión en
+                  adquisición de clientes y optimización de recursos.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="cltv-basic-form">
+                    <div class="input-group">
+                      <label for="compraPromedio">Compra Promedio (en dólares):</label>
+                      <input type="number" id="compraPromedio" name="compraPromedio" placeholder="Ingrese Valor"
+                        step="0.01" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="frecuenciaCompra">Frecuencia de Compra (veces al año):</label>
+                      <input type="number" id="frecuenciaCompra" name="frecuenciaCompra" placeholder="Ingrese Valor"
+                        step="0.01" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="duracionCliente">Duración Promedio del Cliente (años):</label>
+                      <input type="number" id="duracionCliente" name="duracionCliente" placeholder="Ingrese Valor"
+                        required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular CLTV</button>
+                      <button type="button" id="clearBasicResult15">Eliminar CLTV</button>
+                    </div> <br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button class="pdf10" id="descargarBtn03" style="display:none;" onclick="descargarPDF03()">Descargar
+                      Resultados</button>
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="clv"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CLTV_02------CLTV_CLTV_Tradicional -->
+          <div class="tab-item_cltv tab2_cltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">CLTV Tradicional</h1>
+                <p class="paragraph">
+                  Este modelo ajusta los ingresos futuros de un cliente aplicando una tasa de descuento, lo que refleja
+                  el valor
+                  temporal del dinero. Esto permite calcular el valor presente de los ingresos esperados, obteniendo así
+                  el valor
+                  real del cliente a lo largo de su ciclo de vida.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="cltv-advanced-form-2">
+                    <div class="input-group">
+                      <label for="income-discounted">Ingreso promedio por compra:</label>
+                      <input type="number" id="income-discounted" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="retention-discounted">Probabilidad de retención (en %):</label>
+                      <input type="number" id="retention-discounted" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="discount-discounted">Tasa de descuento (en %):</label>
+                      <input type="number" id="discount-discounted" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="years-discounted">Duración del análisis (años):</label>
+                      <input type="number" id="years-discounted" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular CLTV</button>
+                      <button type="button" id="clearBasicResult20">Eliminar CLTV</button>
+                    </div> <br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button class="pdf10" id="descargarBtn04" style="display:none;" onclick="descargarPDF04()">Descargar
+                      Resultados</button>
+
+
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="result-discounted"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CLTV_03-----CLTV_Margen -->
+          <div class="tab-item_cltv tab3_cltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">CLTV Margen</h1>
+                <p class="paragraph">
+                  Este modelo avanzado de CLTV considera no solo los ingresos generados por cada cliente, sino también
+                  los márgenes
+                  de ganancia y otros factores financieros que influyen en la rentabilidad. Es más preciso que el modelo
+                  básico, ya
+                  que ajusta la rentabilidad por la probabilidad de retención y la tasa de descuento, factores clave en
+                  las finanzas.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="cltv-advanced-form-30">
+                    <div class="input-group">
+                      <label for="averageRevenue3">Ingreso promedio por compra:</label>
+                      <input type="number" id="income-margin" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="customerAcquisitionCost3">Margen bruto (en %):</label>
+                      <input type="number" id="margin-margin" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="customerLifetime3">Probabilidad de retención (en %):</label>
+                      <input type="number" id="retention-margin" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="customerLifetime3">Tasa de descuento (en %):</label>
+                      <input type="number" id="discount-margin" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="customerLifetime3">Duración del análisis (años):</label>
+                      <input type="number" id="years-margin" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular CLTV</button>
+                      <button type="button" id="clearAdvancedResult50">Eliminar CLTV</button>
+                    </div> <br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button class="pdf10" id="descargarBtn50" style="display:none;" onclick="descargarPDF50()">Descargar
+                      Resultados</button>
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="advancedResult30"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CLTV_04------CLTV_Predictivo -->
+          <div class="tab-item_cltv tab4_cltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">CLTV Predictivo</h1>
+                <p class="paragraph">
+                  El CLTV Predictivo (Modelo de Cohorte) es una técnica avanzada que agrupa a los clientes en "cohortes"
+                  con
+                  características o comportamientos similares, como fecha de adquisición o patrones de compra, para
+                  predecir su
+                  valor futuro. A diferencia de un cálculo general, este modelo ofrece una visión más precisa al
+                  descomponer la
+                  base de clientes en grupos específicos.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="cltv-advanced-form-40">
+                    <div class="input-group">
+                      <label for="ingreso_promedio">Ingreso promedio por compra:</label>
+                      <input type="number" id="ingreso_promedio" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="retention-year-1">Probabilidad de retención Año 1 (en %):</label>
+                      <input type="number" id="retention-year-1" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="retention-year-2">Probabilidad de retención Año 2 (en %):</label>
+                      <input type="number" id="retention-year-2" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="retention-year-3">Probabilidad de retención Año 3 (en %):</label>
+                      <input type="number" id="retention-year-3" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular CLTV</button>
+                      <button type="button" id="clearAdvancedResult60">Eliminar CLTV</button>
+                    </div> <br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button class="pdf10" id="descargarBtn60" style="display:none;" onclick="descargarPDF60()">Descargar
+                      Resultados</button>
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="result-prediction"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CLTV_05 -->
+          <div class="tab-item_cltv tab5_cltv">
+            <div class="content_calc">
+              <div class="content_calc_left">
+                <h1 class="tab-heading">CLTV Markov</h1>
+                <p class="paragraph">
+                  El CLTV Basado en el Comportamiento (Modelo de Markov) utiliza cadenas de Markov para modelar cómo los
+                  clientes
+                  se mueven entre diferentes "estados" basados en su comportamiento observado. Este enfoque permite un
+                  CLTV más dinámico
+                  y preciso, ya que considera cómo las acciones pasadas de un cliente pueden afectar sus futuras
+                  decisiones de compra o
+                  abandono, en lugar de asumir una tasa de retención fija.
+                </p>
+              </div>
+
+              <div class="content_calc_right">
+                <div class="container_calc">
+                  <form id="cltv-advanced-form-5">
+                    <div class="input-group">
+                      <label for="state1-markov">Probabilidad del Estado 1 (en %):</label>
+                      <input type="number" id="state1-markov" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="value1-markov">Valor esperado en Estado 1:</label>
+                      <input type="number" id="value1-markov" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="state2-markov">Probabilidad del Estado 2 (en %):</label>
+                      <input type="number" id="state2-markov" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="value2-markov">Valor esperado en Estado 2:</label>
+                      <input type="number" id="value2-markov" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="state3-markov">Probabilidad del Estado 3 (en %):</label>
+                      <input type="number" id="state3-markov" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="input-group">
+                      <label for="value3-markov">Valor esperado en Estado 3:</label>
+                      <input type="number" id="value3-markov" step="any" placeholder="Ingrese Valor" required />
+                    </div>
+                    <div class="button-group">
+                      <button type="submit">Calcular CLTV</button>
+                      <button type="button" id="clearAdvancedResult70">Eliminar CLTV</button>
+                    </div> <br>
+
+                    <!-- Botón para descargar el PDF, inicialmente oculto -->
+                    <button type="button" class="pdf10" id="descargarBtn70" style="display:none;"
+                      onclick="descargarPDF70()">Descargar Resultados</button>
+                  </form>
+
+                  <div class="result-container">
+                    <span>El resultado es:</span>
+                    <span id="result-markov"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-container">
+
+      <!-- Contenedor de título y logo -->
+      <div class="footer-logo-container">
+        <div class="footer-titulo">
+          <h1>Calculadoras LTV - CLTV</h1>
+        </div>
+        <div class="footer-logo">
+          <img src="assets/LOGOS/LOGO MÁS CLIENTES ltv y cltv.png" alt="Logo de la Empresa" />
+        </div>
+      </div>
+
+      <!-- Enlaces Rápidos -->
+      <div class="footer-links">
+        <h4>Navegación Rápida</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="https://masclientes.pe/" target="_blank">Nosotros</a></li>
+          <li><a href="#LTV">LTV</a></li>
+          <li><a href="#CLTV">CLTV</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="footer-social">
+        <h4>Redes Sociales</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/masclientes.pe" target="_blank"><span class="iconify facebook"
+                data-icon="akar-icons:facebook-fill"></span></a></li>
+          <li><a href="https://wa.me/51976866575" target="_blank"><span class="iconify whatsapp"
+                data-icon="akar-icons:whatsapp-fill"></span></a></li>
+          <li><a href="https://www.instagram.com/masclientes.pe/" target="_blank"><span class="iconify instagram"
+                data-icon="akar-icons:instagram-fill"></span></a></li>
+          <li><a href="https://pe.linkedin.com/in/nepcastro" target="_blank"><span class="iconify linkedin"
+                data-icon="akar-icons:linkedin-fill"></span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Línea de separación entre contenido principal y derechos -->
+    <div class="footer-bottom">
+      <hr />
+      <div class="footer-info">
+        <p>&copy; 2024 Mas Clientes | Empresa de marketing digital. Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Incluir la librería jsPDF desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="/scripts/animation.js"></script>
+  <!-- SCRIPT DESCARGA DE PDF - LTV -->
+  <script src="scripts/scripts_PDF_LTV/descargar_pdf_basic_LTV.js"></script>
+  <script src="scripts/scripts_PDF_LTV/descarga_pdf_avanzada_ltv.js"></script>
+
+  <!-- LOGICA DE LA CAL_BASIC & AVANZADA - LTV -->
+  <script src="scripts/calcular_LTV.js"></script>
+
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+  <!-- LOGICA DE LA CAL_BASIC- CLTV -->
+  <script src="scripts/calcular_CLTV.js"></script>
+  <!-- SCRIPT DESCARGA DE PDF - CLTV -->
+  <script src="scripts/scripts_PDF_CLTV/descargar_pdf_basic_cltv.js"></script>
+
+  <script src="scripts/scripts_PDF_CLTV/descargar_pdf_traditional_cltv.js"></script>
+
+  <script src="scripts/scripts_PDF_CLTV/descargar_pdf_margen_cltv.js"></script>
+  <script src="scripts/scripts_PDF_CLTV/descargar_pdf_predectiva-cltv.js"></script>
+  <script src="scripts/scripts_PDF_CLTV/descargar_pdf_markov_cltv.js"></script>
+
+
+</body>
+
+</html>

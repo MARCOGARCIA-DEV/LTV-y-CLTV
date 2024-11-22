@@ -1,0 +1,1377 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Muli&family=Poppins:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pdf {
+    width: 70%; /* Ajusta el ancho según necesites */
+    margin: 0 auto; /* Esto centra el bloque */
+}
+
+.pdf10{
+    width: 70%; /* Ajusta el ancho según necesites */
+    margin: 0 auto; /* Esto centra el bloque */
+
+}
+
+
+/* DICCIONARIO GENERAL */
+
+/* Body styling */
+body {
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    background-image: url('/assets/fondos/LTV_CLTV.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #2A8C4A;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Posicionamiento de los elementos en el nav */
+.nav-left ul,
+.nav-center ul,
+.nav-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left img {
+    height: 50px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: lighter;
+}
+
+nav ul li a:hover {
+    color: #2A8C4A;
+}
+
+.nav-center li,
+.nav-right li {
+    border: 4px solid transparent;
+}
+
+.nav-center li:hover,
+.nav-right li:hover {
+    background-color: white;
+    border-radius: 10px;
+    border-color: #ffffff;
+}
+
+/* Ocultar los elementos extra inicialmente */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Mostrar los elementos extra cuando se haga scroll */
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ajuste de la sección principal */
+.portada-section {
+    display: flex;
+    /* Usamos Flexbox para organizar los elementos */
+    flex-direction: row;
+    /* Organiza los elementos en fila (horizontalmente) */
+    justify-content: space-around;
+    /* Espacio alrededor de las columnas */
+    align-items: center;
+    /* Centrar verticalmente el contenido */
+    padding: 100px;
+    margin: 0 auto;
+    /* Centrar la caja dentro del contenedor */
+    height: 60%;
+}
+
+.column {
+    margin-top: 100px;
+    flex: 1;
+    /* Las columnas toman el mismo espacio */
+    text-align: center;
+    /* Centrar el contenido dentro de cada columna */
+    align-items: center;
+    /* Espacio entre logo y texto */
+    font-family: 'Koulen', sans-serif;
+}
+
+.container01 {
+    font-size: 5rem;
+}
+
+.container02 {
+    font-size: 2.5rem;
+}
+
+.logo {
+    max-width: 80%;
+    /* La imagen no excederá el tamaño de su columna */
+    height: auto;
+    /* Mantener las proporciones de la imagen */
+    margin: -80px;
+}
+
+
+
+
+.scroll-arrow {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.scroll-arrow .arrow {
+    font-size: 3em;
+    color: #2A8C4A;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow .arrow:hover {
+    background-color: #2A8C4A;
+    color: white;
+    border-radius: 5px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.nav-toggle {
+    display: none;
+    /* Se oculta en escritorio */
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* MAIN_LIFETIME_VALUE */
+
+/* General container styling */
+
+
+
+.lifetime_value .container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    align-self: center;
+}
+
+
+/* Section heading */
+
+.lifetime_value .descripcion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 65px;
+    margin-bottom: 20px;
+
+}
+
+.lifetime_value .title_ltv {
+    font-family: 'Koulen', sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    line-height: 60px;
+    margin-left: 150px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.lifetime_value .descripcion p {
+    font-family: 'aBeeZee', sans-serif;
+    margin-left: 250px;
+    font-size: 1rem;
+}
+
+/* Tab container styling */
+.lifetime_value .tab-container {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Ajustar el contenedor de los filtros */
+.lifetime_value .tab-filter-container {
+    font-family: 'koulen', sans-serif;
+    width: fit-content;
+    /* Ajusta el contenedor al tamaño de los botones */
+    display: flex;
+    justify-content: center;
+    /* Centrar el contenido horizontalmente */
+    padding: 0.3rem;
+    /* Reducir el padding para hacerlo más compacto */
+    background-color: #d9d9d9;
+    list-style: none;
+    border-radius: 50px;
+    margin: 0 auto 2rem auto;
+    /* Centrar el contenedor y añadir margen inferior */
+}
+
+/* Botones de filtro */
+.lifetime_value .filter-btn_ltv {
+    cursor: pointer;
+    padding: 0.1rem 2.5rem;
+    color: black;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.lifetime_value .filter-btn_ltv:hover {
+    background-color: #2A8C4A;
+    color: white;
+}
+
+.lifetime_value .filter-btn_ltv.active {
+    background-color: #2A8C4A;
+    color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Tab content styling */
+.lifetime_value .tab-filter-item-container {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.lifetime_value .tab-item_ltv {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lifetime_value .tab-item_ltv.select_tab_ltv {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: -10px;
+}
+
+/* Ajustar el contenedor principal para una mejor alineación */
+.lifetime_value .content_calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+/* Estilo para el lado izquierdo con el texto descriptivo */
+.lifetime_value .content_calc_left {
+    flex: 1;
+    margin-right: 100px;
+    text-align: left;
+}
+
+/* Mejorar la legibilidad del texto */
+.lifetime_value .tab-heading {
+    font-family: 'koulen', sans-serif;
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+.lifetime_value .paragraph {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilo para el lado derecho con el formulario */
+.lifetime_value .content_calc_right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del contenedor del formulario */
+.lifetime_value .container_calc {
+    background-color: #d9d9d9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilo para los grupos de entrada */
+.lifetime_value .input-group {
+    margin-bottom: 1.5rem;
+}
+
+.lifetime_value label {
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.lifetime_value input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    /* Borde por defecto */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+    /* Transición suave para el cambio de borde */
+}
+
+/* Cambiar el color del borde cuando el input tiene el foco */
+.lifetime_value input[type="number"]:focus {
+    border: 2px solid #2A8C4A;
+    /* Borde cuando está en foco */
+    outline: none;
+    /* Quitar el contorno predeterminado del navegador */
+}
+
+/* Estilo del grupo de botones */
+.lifetime_value .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.lifetime_value button {
+    background-color: #2A8C4A;
+    color: white;
+    font-family: 'Koulen', sans-serif;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lifetime_value button:hover {
+    background-color: white;
+    color: #2A8C4A;
+}
+
+/* Contenedor del resultado */
+.lifetime_value .result-container {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+#basicResult,
+#advancedResult,
+#clv,
+#result-discounted,
+#advancedResult30,
+#result-prediction,
+#result-markov {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    font-family: 'aBeeZee', sans-serif;
+}
+
+/* Asegurarse de que los botones estén siempre visibles */
+#clearResult,
+#clearAdvancedResult {
+    display: inline-block;
+}
+
+
+/* MAIN_CONSUMER_LIFETIME_VALUE */
+
+/* General container styling */
+
+.consumer_lifetime_value {
+    background-color: #d9d9d9;
+}
+
+.consumer_lifetime_value .container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    align-self: center;
+}
+
+
+/* Section heading */
+
+.consumer_lifetime_value .descripcion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+}
+
+.consumer_lifetime_value .title_cltv {
+    font-family: 'Koulen', sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    line-height: 60px;
+    margin-left: 150px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.consumer_lifetime_value .descripcion p {
+    font-family: 'aBeeZee', sans-serif;
+    margin-left: 250px;
+    font-size: 1rem;
+}
+
+/* Tab container styling */
+.consumer_lifetime_value .tab-container {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Ajustar el contenedor de los filtros */
+.consumer_lifetime_value .tab-filter-container {
+    font-family: 'koulen', sans-serif;
+    width: fit-content;
+    /* Ajusta el contenedor al tamaño de los botones */
+    display: flex;
+    justify-content: center;
+    /* Centrar el contenido horizontalmente */
+    padding: 0.3rem;
+    /* Reducir el padding para hacerlo más compacto */
+    background-color: #2A8C4A;
+    list-style: none;
+    border-radius: 50px;
+    margin: 0 auto 2rem auto;
+    /* Centrar el contenedor y añadir margen inferior */
+}
+
+/* Botones de filtro */
+.consumer_lifetime_value .filter-btn_cltv {
+    cursor: pointer;
+    padding: 0.1rem 2.5rem;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.consumer_lifetime_value .filter-btn_cltv:hover {
+    background-color: white;
+    color: #2A8C4A;
+}
+
+.consumer_lifetime_value .filter-btn_cltv.active {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Tab content styling */
+.consumer_lifetime_value .tab-filter-item-container {
+    padding: 2rem;
+    background-color: #d9d9d9;
+    border-radius: 25px;
+}
+
+.consumer_lifetime_value .tab-item_cltv {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.consumer_lifetime_value .tab-item_cltv.select_tab_cltv {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajustar el contenedor principal para una mejor alineación */
+.consumer_lifetime_value .content_calc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Estilo para el lado izquierdo con el texto descriptivo */
+.consumer_lifetime_value .content_calc_left {
+    flex: 1;
+    margin-right: 100px;
+    text-align: left;
+}
+
+/* Mejorar la legibilidad del texto */
+.consumer_lifetime_value .tab-heading {
+    font-family: 'koulen', sans-serif;
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+.consumer_lifetime_value .paragraph {
+    font-family: "ABeeZee", sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilo para el lado derecho con el formulario */
+.consumer_lifetime_value .content_calc_right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del contenedor del formulario */
+.consumer_lifetime_value .container_calc {
+    background-color: #2A8C4A;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 115%;
+    max-width: 400px;
+}
+
+/* Estilo para los grupos de entrada */
+.consumer_lifetime_value .input-group {
+    margin-bottom: 1.5rem;
+}
+
+.consumer_lifetime_value label {
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.consumer_lifetime_value input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    /* Borde por defecto */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+    /* Transición suave para el cambio de borde */
+}
+
+/* Cambiar el color del borde cuando el input tiene el foco */
+.consumer_lifetime_value input[type="number"]:focus {
+    border: 2px solid rgb(0, 0, 0);
+    /* Borde cuando está en foco */
+    outline: none;
+    /* Quitar el contorno predeterminado del navegador */
+}
+
+/* Estilo del grupo de botones */
+.consumer_lifetime_value .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.consumer_lifetime_value button {
+    background-color: #ffffff;
+    color: #2A8C4A;
+    font-family: 'Koulen', sans-serif;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.consumer_lifetime_value button:hover {
+    background-color: #d9d9d9;
+    color: black;
+}
+
+/* Contenedor del resultado */
+.consumer_lifetime_value .result-container {
+    margin-top: 1rem;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+#result-discounted,
+#clv {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    font-family: 'aBeeZee', sans-serif;
+}
+
+/* Asegurarse de que los botones estén siempre visibles */
+#clearResult,
+#clearAdvancedResult {
+    display: inline-block;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #2A8C4A;
+    color: #ecf0f1;
+    font-family: 'Arial', sans-serif;
+    padding: 40px 0;
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: start; /* Alinea los elementos al inicio */
+    text-align: center;
+}
+
+/* Contenedor para el título y logo juntos */
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Título sobre el logo */
+.footer-titulo h1 {
+    letter-spacing: 2px;
+    font-size: 35px;
+    color: #ecf0f1;
+    font-family: 'koulen', sans-serif;
+    margin: 0 0 10px; /* Espacio entre el título y el logo */
+}
+
+/* Logo de la empresa */
+.footer-logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Enlaces rápidos y redes sociales */
+.footer-links, .footer-social {
+    align-self: center;
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
+
+/* Títulos de secciones */
+.footer-links h4, .footer-social h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+/* Listas de enlaces */
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+.footer-links ul li a:hover {
+    color: yellow;
+}
+
+/* Estilos de iconos de redes sociales */
+.footer-social ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-social ul li a {
+    font-size: 30px;
+    color: #ecf0f1;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .facebook:hover { color: #2657c0; transform: scale(1.1); }
+.footer-social .whatsapp:hover { color: #25D366; transform: scale(1.1); }
+.footer-social .instagram:hover { color: #E1306C; transform: scale(1.1); }
+.footer-social .linkedin:hover { color: #0077B5; transform: scale(1.1); }
+
+/* Línea y derechos reservados */
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom hr {
+    border: 0;
+    border-top: 1px solid #ecf0f1;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #ecf0f1;
+    margin: 10px 0;
+}
+
+.footer-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: yellow;
+}
+
+/* Media Queries para hacer el footer responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .footer-social {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 120px;
+    }
+
+    .footer-bottom hr {
+        width: 100%;
+    }
+}
+
+
+/* RESPONSIVE */
+
+
+@media (max-width: 768px) {
+    /* MOVIL*/
+
+    /* HEADER */
+
+    /* Estilos para nav */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 65px;
+        background-color: #2A8C4A;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        transition: top 0.3s ease;
+    }
+
+    /* Ocultar menú horizontal en pantallas pequeñas */
+    .nav-menu {
+        display: flex;
+        /* Usar flexbox para organizar los elementos */
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        /* Ocupar toda la altura de la vista */
+        background-color: #2a8c4b81;
+        backdrop-filter: blur(10px);
+        /* Color de fondo del menú */
+        position: fixed;
+        /* Fijo para que no se desplace con el contenido */
+        top: 60px;
+        /* Distancia desde la barra de navegación */
+        left: 0;
+        padding: 50px;
+        opacity: 0;
+        /* Comienza oculto */
+        visibility: hidden;
+        /* Evita que el menú ocupe espacio */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        /* Transiciones suaves */
+        z-index: 999;
+        /* Asegura que el menú esté sobre otros elementos */
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        /* Muestra el menú */
+        visibility: visible;
+        /* Permite la interacción */
+    }
+
+    .nav-menu li {
+        justify-content: center;
+        /* Centrar los elementos */
+        align-items: center;
+        padding: 30px 5px;
+        /* Asegura un espaciado consistente */
+        width: 100%;
+        /* Asegura que cada elemento ocupe todo el ancho */
+        font-size: 1.5rem;
+        text-align: center;
+        /* Centrar el texto */
+        color: white;
+        /* Color del texto */
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+
+    .nav-toggle {
+        font-size: 2rem;
+        display: flex;
+        /* Mostrar botón hamburguesa en móviles */
+        z-index: 1001;
+        /* Asegura que el botón esté sobre otros elementos */
+        margin: 10px;
+        /* Espaciado alrededor del botón */
+        text-align: center;
+        align-self: center;
+        color: white;
+    }
+
+
+    /* Asegurar que los elementos en los lados ocupen el ancho completo */
+    .nav-left,
+    .nav-right {
+        display: flex;
+        /* Mantener flex para los elementos adicionales */
+        flex-direction: column;
+        align-items: center;
+        /* Centrar los elementos */
+    }
+
+    .nav-left img {
+        width: 70px;
+        height: auto;
+    }
+
+    .nav-right a {
+        font-size: 0.6rem;
+    }
+
+
+
+    .extra-item-left,
+    .extra-item-right {
+        display: flex;
+        /* Asegura que los elementos extra estén visibles */
+        justify-content: center;
+        /* Centrar contenido extra */
+        width: 100%;
+        /* Ocupa todo el ancho */
+        color: white;
+        /* Color del texto */
+    }
+
+
+    /* CONTENEDOR PRINCIPAL - PORTADA-SECTION */
+
+    header {
+        background-image: url(/assets/fondos/LTV_CLTV.png);
+        background-position: center 65px;
+        /* Ajusta el valor 20px según lo que necesites */
+        background-size: cover;
+    }
+
+    .portada-section {
+        flex-direction: column;
+        /* Cambiar a columnas verticales en pantallas pequeñas */
+        margin-top: 0px;
+        margin: 5px
+    }
+
+    .scroll-arrow {
+        display: none;
+    }
+
+    .container01 {
+        font-size: 2rem;
+        /* Ajustar el tamaño del texto para móviles */
+        margin-top: -150px;
+        align-items: center;
+    }
+
+    .container02 {
+        font-size: 1rem;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 110%;
+        /* Reducir el tamaño de la imagen en pantallas pequeñas */
+        min-width: 300px;
+        margin: 0 auto;
+        /* Centrar la imagen en la columna */
+        margin-left: -15px;
+        margin-top: -200px;
+    }
+
+    /*MAIN_LTV*/
+
+    .lifetime_value .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lifetime_value .descripcion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lifetime_value .descripcion p {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+
+    .lifetime_value .filter-btn_ltv {
+        padding: 0.3rem 1.5rem;
+        /* Ajustar padding */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .lifetime_value .tab-container {
+        width: 90%;
+    }
+
+    .lifetime_value .tab-filter-item-container {
+        padding: 0;
+    }
+
+    .lifetime_value .content_calc {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .lifetime_value .container_calc {
+        padding: 1.5rem;
+        /* Reducir el padding */
+    }
+
+    .lifetime_value label {
+        font-size: 1rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .lifetime_value input[type="number"] {
+        padding: 0.4rem;
+        /* Ajustar padding */
+        font-size: 0.9rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .lifetime_value button {
+        padding: 0.2rem 1rem;
+        /* Ajustar padding */
+        font-size: 1rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    #basicResult {
+        font-size: 1.2rem;
+        /* Reducir tamaño del resultado */
+    }
+
+    /* MAIN_CLTV */
+
+    .consumer_lifetime_value .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consumer_lifetime_value .descripcion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consumer_lifetime_value .descripcion p {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+
+    .consumer_lifetime_value .filter-btn_cltv {
+        padding: 0.3rem 1.5rem;
+        /* Ajustar padding */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .consumer_lifetime_value .tab-container {
+        width: 90%;
+    }
+
+    
+
+    .consumer_lifetime_value .tab-filter-item-container {
+        padding: 0;
+    }
+
+    .consumer_lifetime_value .content_calc {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .consumer_lifetime_value .container_calc {
+        padding: 1.5rem;
+        /* Reducir el padding */
+    }
+
+    .consumer_lifetime_value label {
+        font-size: 1rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .consumer_lifetime_value input[type="number"] {
+        padding: 0.4rem;
+        /* Ajustar padding */
+        font-size: 0.9rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .consumer_lifetime_value button {
+        padding: 0.2rem 1rem;
+        /* Ajustar padding */
+        font-size: 1rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    /* Contenedor principal ajustado para dispositivos móviles */
+    .consumer_lifetime_value .tab-filter-container {
+        font-family: 'koulen', sans-serif;
+        display: flex;
+        flex-wrap: wrap; /* Permite que las pestañas se distribuyan en filas */
+        justify-content: center;
+        padding: 0.0rem;
+        background-color: #2A8C4A;
+        list-style: none;
+        border-radius: 30px;
+        margin: 0 auto 2rem auto;
+        gap: 0.5rem; /* Añadir espacio entre las pestañas */
+        width: 100%;
+    }
+
+    /* Ajustar las pestañas para que una fila tenga tres y la otra dos */
+    .consumer_lifetime_value .tab-filter-container li {
+        flex: 1 0 30%; /* Primera fila con tres pestañas (30% de ancho cada una) */
+        margin: 0.3rem;
+        text-align: center;
+    }
+
+    /* Segunda fila con dos pestañas (ajustar al 45% del ancho para dos en una fila) */
+    .consumer_lifetime_value .tab-filter-container li:nth-child(4),
+    .consumer_lifetime_value .tab-filter-container li:nth-child(5) {
+        flex: 1 0 45%; /* Segunda fila: 45% del ancho para dos pestañas */
+    }
+}
+
+
+
+
+@media (max-width: 992px) {
+    /* TABLETS */
+
+    .nav-right {
+        font-size: 0.7rem;
+    }
+
+    /* MAIN LTV */
+
+    .lifetime_value .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lifetime_value .descripcion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lifetime_value .title_ltv {
+        margin-left: 0px;
+    }
+
+    .lifetime_value .descripcion p {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+
+    .lifetime_value .filter-btn_ltv {
+        padding: 0.3rem 1.5rem;
+        /* Ajustar padding */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .lifetime_value .content_calc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MAIN CLTV */
+
+    .consumer_lifetime_value .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consumer_lifetime_value .descripcion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consumer_lifetime_value .title_cltv {
+        margin-left: 0px;
+    }
+
+    .consumer_lifetime_value .descripcion p {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+
+    .consumer_lifetime_value .filter-btn_cltv {
+        padding: 0.3rem 1.5rem;
+        /* Ajustar padding */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .consumer_lifetime_value .content_calc {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+@media (max-width: 1280px) {
+    /* Escritorios pequeños */
+
+    .container01 {
+        font-size: 3.5rem;
+    }
+
+    .container02 {
+        font-size: 1.8rem;
+    }
+
+
+    /* MAIN LTV */
+
+    .lifetime_value .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lifetime_value .descripcion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lifetime_value .title_ltv {
+        margin-left: 0px;
+        font-size: 3rem;
+    }
+
+    .lifetime_value .descripcion p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-left: 0px;
+    }
+
+
+    .lifetime_value .filter-btn_ltv {
+        padding: 0.3rem 1.5rem;
+        /* Ajustar padding */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .lifetime_value .content_calc {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .lifetime_value .content_calc_left {
+        margin-right: 0px;
+    }
+
+    .lifetime_value .tab-heading {
+        font-size: 2rem;
+    }
+
+    .lifetime_value .paragraph {
+        font-size: 1rem;
+    }
+
+    .lifetime_value .content_calc_right {
+        align-self: center;
+    }
+
+    /* MAIN CLTV */
+
+    .consumer_lifetime_value .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consumer_lifetime_value .descripcion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consumer_lifetime_value .title_cltv {
+        margin-left: 0px;
+        font-size: 3rem;
+    }
+
+    .consumer_lifetime_value .descripcion p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-left: 0px;
+    }
+
+
+    .consumer_lifetime_value .filter-btn_cltv {
+        padding: 0.3rem 1.5rem;
+        /* Ajustar padding */
+        font-size: 1.2rem;
+        /* Reducir tamaño de fuente */
+    }
+
+    .consumer_lifetime_value .content_calc {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .consumer_lifetime_value .content_calc_left {
+        margin-right: 0px;
+    }
+
+    .consumer_lifetime_value .tab-heading {
+        font-size: 2rem;
+    }
+
+    .consumer_lifetime_value .paragraph {
+        font-size: 1rem;
+    }
+
+    .consumer_lifetime_value .content_calc_right {
+        align-self: center;
+    }
+}
